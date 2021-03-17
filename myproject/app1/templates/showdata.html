@@ -1,0 +1,12 @@
+<h1>Show Student</h1>
+
+<h1> {{ key1 }} </h1>
+
+{% if key1 %}
+    {% for k in key1 %}
+        Name:{{ k.name }}<br/>
+        Branch:{{ k.Branch }}<br/>
+        Email:{{ k.email }}<br/>
+        <hr/>
+    {% endfor %}
+{% endif %}

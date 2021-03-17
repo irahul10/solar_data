@@ -1,0 +1,59 @@
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+
+<h1>Search for solar Data</h1>
+<form action="../filtter_data/" method="POST">
+    {% csrf_token %}
+    <p style="margin: 0; display: inline;">
+        Start Date: <input type="date" name="start_date" required>
+    </p>
+
+    <p style="margin: 0; display: inline;" align="right">
+        End Date: <input type="date" name="end_date" required>
+    </p>
+
+    <p>
+        <input type="submit" value="Search">
+    </p>
+</form>
+
+
+<h1>Solar Data</h1>
+<table>
+    <tr>
+      <th>FILEPATH</th>
+      <th>NAXIST1</th>
+      <th>NAXIST2</th>
+      <th>DATE</th>
+      <th>PROGRAM</th>
+  </tr>
+
+{% for row in result %}
+    <tr>
+        <td>{{ row.0 }}</td>
+        <td>{{ row.1 }}</td>
+        <td>{{ row.2 }}</td>
+        <td>{{ row.3 }}</td>
+        <td>{{ row.4 }}</td>
+    </tr>
+
+{% endfor %}
+</table>

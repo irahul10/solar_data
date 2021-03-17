@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+    </head>
+
+    <body>
+    <div id="main">
+    	<div id="wrapper">
+    		
+            <div id="banner"> 
+                <!-- <h1 align="center"><marquee direction="down" height="100" width="200">Data Archive</marquee></h1> -->
+                <h1>
+                    Data Archive
+                </h1>
+            </div><!--end of banner-->
+
+            <div class="navbar">
+                  <a href="index.html">Home</a>
+                  <a href="data.html">Data</a>
+                  
+                  <div class="dropdown">
+                    
+                    <button class="dropbtn">Dropdown 
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>
+                      <a href="#">Link 2</a>
+                      <a href="#">Link 3</a>
+                    </div>
+
+                  </div> 
+                
+            </div>
+            
+            <div id="middle">
+            	<div id="content">
+                    <h2 style="margin-left:10px; color: darkblue;">Welcome to The ARIES Data Archive</h2>
+
+                    <!-- <p style="margin-left:10px; font-family:'Black', Gadget, sans-serif; font: size 1.3em;; text-align: justify; margin-right: 10px;">Situated adjacent to the picturesque hill town of Nainital, ARIES (an acronym of Aryabhatta Research Institute of Observational Sciences) is one of the leading research Institutes which specializes in observational Astronomy & Astrophysics and Atmospheric Sciences. The main research interests of Astronomy & Astrophysics division are in solar, planetary, stellar, galactic and extra-galactic astronomy including stellar variabilities, X-ray binaries, star clusters, nearby galaxies, quasars, and inherently transient events like supernovae and highly energetic gamma-ray bursts. Research focus in Atmospheric Sciences division is mainly in the lower part of the atmosphere and covers the studies on aerosols and trace gases. Moreover, to strengthen the scientific contribution.</p> -->
+
+                    <form action="/new/archive/search" method="POST" name="search-archive" class="form-horizontal">
+                        <div class='col-md-12 col-md-offset-2'>
+                            </br>
+                         </br>
+                 
+                         <div class='row'>
+                             <div class='col-md-12'>
+                                 <div class="form-group">
+                                     <div class='col-md-4'>
+                                     
+                                         <label for='start_date'> Start Date: </label>&nbsp;&nbsp;&nbsp;
+                 
+                                         <input type="date" class="form-control-sm" id='start_date' type="text" name='start_date' data-type="date" placeholder='1947-08-15' required>
+                                     </div>
+                                             
+                                     <div class='col-md-0'></div>
+                 
+                                        <div class='col-md-4'>
+                                         <label for='end_date'> End Date: </label>&nbsp;&nbsp;&nbsp;
+                 
+                                         <input type="date" class="form-control-sm" id='end_date' type="text" name='end_date' data-type="date" placeholder='1950-01-26' required>
+                                     </div>
+                                 </div>
+                             </div>
+                             
+                         </div>
+                         </br>
+                         <div class='row'>	
+                             <div class='col-md-12'>
+                                  <div class="form-group">
+                                      <div class='col-md-2' align="left">
+                 
+                                         <label for="filter" class="radio" ><b> Select Filter:</b></label>
+                                     </div>
+                                     <div class='col-md-3 filter_grp'>
+                 
+                                         <label id='whitelight' class="radio-inline"><input
+                                         id='whitelight_ip' type="radio" name="filter" checked
+                                         value="WL" >Whitelight</label></br>
+                 
+                                            <label id='cak_full_disk' class="radio-inline"><input
+                                            id='cak_full_disk_ip' type="radio" name="filter"
+                                            value="CAK">Ca K (full-disk)</label></br>
+                 
+                 
+                                         <label id='cak_prominence' class="radio-inline disabled"><input
+                                         id='cak_prominence_ip' type="radio" name="filter"
+                                         value="CAK" disabled>Ca K (prominence)&nbsp;&nbsp;<span id="cak-prominence" > Coming Soon! </span></label></br>
+                 
+                 
+                                                                
+                 
+                 
+                                         <label id='h_alpha' class="radio-inline"><input
+                                         id='h_alpha_ip' type="radio" name="filter"
+                                         value="HA">H-alpha</label>
+                                     </div>
+                                     
+                                 </div>
+                             </div>
+                         </div>
+                         </br>
+                         <div class='row'>	
+                             <div class='col-md-12'>
+                                  <div class="form-group">
+                 
+                                     <div class='col-md-2'>
+                 
+                 
+                                     <label class="radio"> <b> Select Level: </b></label>
+                                     </div>
+                                     <div class='col-md-3 level_grp'>
+                 
+                                         <label id='level0' class="radio-inline"><input
+                                         id='level0_ip' type="radio" name="level" checked
+                                         value="0a">Level 0 (RAW)</label></br>
+                 
+                                         <label id='level1' class="radio-inline"><input
+                                         id='level1_ip' type="radio" name="level" value="1a">Level 1
+                                         (Basic Calibrated)</label></br>
+                 
+                                         <label id='level2' class="radio-inline"><input
+                                         id='level2_ip' type="radio" name="level" value="1b">Level 2
+                                         (Limb Darkening Corrected)</label></br>
+                 
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                         </br>
+
+                    <!-- <table width="500" bgcolor="#FFFFCC" border="2" bordercolor="#999999" height="100" style="margin-left:100px;">
+                        <tr>
+                            <th>District</th>
+                            <th>kota</th>
+                        </tr>
+
+                        <tr>
+                            <th>Area</th>
+                            <th>221.36km2</th>
+                        </tr>
+
+                        <tr>
+                            <th>Population</th>
+                            <th>1001,64</th>
+                        </tr>
+
+                        <tr>
+                            <th>MP
+                            <th>Shri Om birla</th>
+                        </tr>
+                    </table> -->
+
+                </div><!--end of content-->
+                
+                <!-- <div id="ad">
+                    <div id="dx">
+                        <p style="font-family:'Arial Black', Gadget, sans-serif; font-size:16px; margin-top:6px; margin-bottom:15px; text-align:center;"> 'ARIES' </p>
+                    </div>
+                </div>end of ad -->
+            </div><!--end of middle-->
+            
+            
+           
+            <div id="bottom">
+            	<p>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Privacy Policy</a>
+                </p>
+                <p style="font-family:Tahoma, Geneva, sans-serif; color:#fff;">
+                Copyright &copy; 2020, All rights reserved ARIES India.</br></br></p>
+             
+                
+                
+                
+            </div>
+    	</div><!--end of wrapper-->         
+    </div><!--end of main-->
+
+
+
+    </body>
+</html>
